@@ -1,9 +1,5 @@
 FROM node:latest
 
-# Copy source-sans font 
-# https://github.com/adobe-fonts/source-sans/releases/tag/3.046R
-COPY ./source-sans-pro-3.006R/ /usr/share/fonts/
-
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
 # Note: this installs the necessary libs to make the bundled version of Chromium that Puppeteer
 # installs, work.
