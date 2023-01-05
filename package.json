@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvarcarto/url-to-pdf-api.git"
+    "url": "git+https://github.com/kelter-antunes/url-to-pdf-api"
   },
-  "author": "Kimmo Brunfeldt",
+  "author": "Miguel 'Kelter' Antunes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alvarcarto/url-to-pdf-api/issues"
+    "url": "https://github.com/kelter-antunes/url-to-pdf-api/issues"
   },
-  "homepage": "https://github.com/alvarcarto/url-to-pdf-api#readme",
+  "homepage": "https://github.com/kelter-antunes/url-to-pdf-api#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",

@@ -1,7 +1,3 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alvarcarto/url-to-pdf-api)
-
-[![Build Status](https://travis-ci.org/alvarcarto/url-to-pdf-api.svg?branch=master)](https://travis-ci.org/alvarcarto/url-to-pdf-api)
-
 # URL to PDF Microservice
 
 > Web page PDF rendering done right. Microservice for rendering receipts, invoices, or any content. Packaged to an easy API.
@@ -127,7 +123,7 @@ curl -o html.pdf -XPOST -d@test/resources/large.html -H"content-type: text/html"
 ## API
 
 To understand the API options, it's useful to know how [Puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md)
-is internally used by this API. The [render code](https://github.com/alvarcarto/url-to-pdf-api/blob/master/src/core/render-core.js)
+is internally used by this API. The [render code](https://github.com/kelter-antunes/url-to-pdf-api/blob/master/src/core/render-core.js)
 is quite simple, check it out. Render flow:
 
 1. **`page.setViewport(options)`** where options matches `viewport.*`.
@@ -307,23 +303,6 @@ curl -XGET http://localhost:9000/health
 
 ## Development
 
-To get this thing running, you have two options: run it in Heroku, or locally.
-
-The code requires Node 8+ (async, await).
-
-#### 1. Heroku deployment
-
-Scroll this readme up to the Deploy to Heroku -button. Click it and follow
-instructions.
-
-**WARNING:** *Heroku dynos have a very low amount of RAM. Rendering heavy pages
-may cause Chrome instance to crash inside Heroku dyno. 512MB should be
-enough for most real-life use cases such as receipts. Some news sites may need
-even 2GB of RAM.*
-
-
-#### 2. Local development
-
 First, clone the repository and cd into it.
 
 * `cp .env.sample .env`
@@ -336,8 +315,7 @@ First, clone the repository and cd into it.
 
 ### Techstack
 
-* Node 8+ (async, await), written in ES7
+* Node 19+ (async, await), written in ES7
 * [Express.js](https://expressjs.com/) app with a nice internal architecture, based on [these conventions](https://github.com/kimmobrunfeldt/express-example).
 * Hapi-style Joi validation with [express-validation](https://github.com/andrewkeig/express-validation)
-* Heroku + [Puppeteer buildpack](https://github.com/jontewks/puppeteer-heroku-buildpack)
 * [Puppeteer](https://github.com/GoogleChrome/puppeteer) to control Chrome
