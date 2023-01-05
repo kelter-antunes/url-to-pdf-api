@@ -32,7 +32,6 @@
     "lodash": "^4.17.15",
     "morgan": "^1.9.1",
     "normalize-url": "^5.0.0",
-    "pdf-parse": "^1.1.1",
     "puppeteer": "^19.4.1",
     "server-destroy": "^1.0.1",
     "winston": "^2.3.1"
@@ -41,6 +40,7 @@
     "chai": "^4.1.2",
     "env-cmd": "^9.0.1",
     "eslint": "^4.8.0",
+    "pdf-parse": "^1.1.1",
     "eslint-config-airbnb-base": "^12.0.2",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^4.0.1",
