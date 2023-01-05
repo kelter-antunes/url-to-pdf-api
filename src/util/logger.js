@@ -8,6 +8,7 @@ const COLORIZE = config.NODE_ENV === 'development';
 function createLogger(filePath) {
   const fileName = path.basename(filePath);
 
+
   const logger = new winston.Logger({
     transports: [new winston.transports.Console({
       colorize: COLORIZE,

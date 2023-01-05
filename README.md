@@ -131,7 +131,7 @@ is internally used by this API. The [render code](https://github.com/alvarcarto/
 is quite simple, check it out. Render flow:
 
 1. **`page.setViewport(options)`** where options matches `viewport.*`.
-2. *Possibly* **`page.emulateMedia('screen')`** if `emulateScreenMedia=true` is set.
+2. *Possibly* **`page.emulateMediaType('screen')`** if `emulateScreenMedia=true` is set.
 3. Render url **or** html.
 
     If `url` is defined, **`page.goto(url, options)`** is called and options match `goto.*`.
@@ -294,6 +294,16 @@ paremeter.
 curl -o receipt.html https://rawgit.com/wildbit/postmark-templates/master/templates_inlined/receipt.html
 curl -o html.pdf -XPOST -d@receipt.html -H"content-type: text/html" http://localhost:9000/api/render?pdf.scale=1
 ```
+
+
+### GET /health
+
+Health check endpoint used for monitoring if the service is still up and running.
+
+```bash
+curl -XGET http://localhost:9000/health
+```
+
 
 ## Development
 

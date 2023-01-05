@@ -8,6 +8,7 @@ const { getResource } = require('./util');
 const pdf = require('pdf-parse');
 const createApp = require('../src/app');
 
+
 const DEBUG = false;
 
 BPromise.config({
@@ -209,4 +210,8 @@ describe('POST /api/render', () => {
         chai.expect(text).to.have.string('special characters: ä ö ü');
       })
   );
+});
+
+describe('GET /healthcheck', () => {
+  it('should return ok', () => request(app).get('/healthcheck').expect(200));
 });
