@@ -1,4 +1,4 @@
-FROM node:slim
+FROM node:19-bullseye-slim
 
 # We don't need the standalone Chromium
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
