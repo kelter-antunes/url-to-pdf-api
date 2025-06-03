@@ -32,7 +32,7 @@
     "lodash": "^4.17.20",
     "morgan": "^1.9.1",
     "normalize-url": "^5.0.0",
-    "puppeteer": "^19.4.1",
+    "puppeteer": "^24.10.0",
     "server-destroy": "^1.0.1",
     "winston": "^2.3.1"
   },
